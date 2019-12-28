@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>NIEUWE SLIDE</title>
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="lib/css/atom-one-light.css" />
+
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/hogent.css" />
+
+    <!-- pieter overrides -->
+    <link rel="stylesheet" href="plugin/codestepper/codestepper.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          class="title-slide"
+          data-transition="none"
+          data-background-transition="none"
+        >
+          <img class="title-img" src="img/hogent_titlepic2.png" />
+
+          <h2>title of this class</h2>
+          <footer class="footer">
+            "The first step of any project is to grossly underestimate its
+            complexity and difficulty." - Nicoll Hunt
+          </footer>
+        </section>
+        <section class="contents-slide">
+          <h3>overview.</h3>
+          <ol style="font-size: 80%">
+            <li>
+              <a href="#/intro">intro</a> <br />
+              <span> intro description </span>
+            </li>
+            <li>
+              <a href="#/summary">summary</a><br />
+              <span>summary of this class</span>
+            </li>
+          </ol>
+        </section>
+        <section id="intro">
+          <h3>list contents.</h3>
+          <ul>
+            <li>a very interesting point</li>
+            <li>somewhat related</li>
+            <li>completely different point being made</li>
+            <li>why is this even a list?</li>
+          </ul>
+        </section>
+        <section>
+          <h3>interesting code example.</h3>
+          <div codesteps>
+            <pre
+              class="java"
+            >src/myclass.java <code class='codesteps' data-noescape data-trim>
+            class MyClass {
+              public static void main() {
+                <span sstep='1'>return 0;</span><span sstep='2'>int x = 1;
+                return x;</span>
+              }
+            }
+            </code></pre>
+            <div explanation>
+              <span step="1">class explanation </span>
+              <span step="2">let's return 1 not 0</span>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>slide with image and text side by side.</h3>
+          <div class="two-columns">
+            <div style="height: 600px; grid-row: 1/4">
+              <img src="img/hogent_titlepic1.png" alt="hogent model" />
+            </div>
+            <div style="text-align: center; grid-row: 2">
+              picturing the underpaid stock photo model used by hogent in all
+              its slides
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="xkcd-chart">
+            <svg
+              class="xy-chart"
+              data-chart-json="data-files/angular-react-vue.json"
+            ></svg>
+          </div>
+        </section>
+        <section>
+          <div class="xkcd-chart">
+            <svg
+              class="bar-chart"
+              data-chart-json="data-files/student-behaviour.json"
+            ></svg>
+          </div>
+        </section>
+        <section>
+          test
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/chart.xkcd.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="plugin/codestepper/codestepper.js"></script>
+    <script src="js/hogent-reveal.js" data-start-at-last="true"></script>
+    <script src="js/snap.svg.js"></script>
+  </body>
+</html>
