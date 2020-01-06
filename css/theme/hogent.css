@@ -516,6 +516,14 @@ body:not(.hogent-white-text):after {
   left: 12%;
 }
 
+.reveal .title-slide h4 {
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  position: fixed;
+  top: 42%;
+  left: 12%;
+}
+
 .reveal .title-slide .title-img {
   position: fixed;
   left: 0px;
@@ -571,6 +579,14 @@ body:not(.hogent-white-text):after {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 10px;
+}
+
+.reveal .two-columns .column-left {
+  grid-column: 1;
+}
+
+.reveal .two-columns .column-right {
+  grid-column: 2;
 }
 
 .reveal .xkcd-chart {

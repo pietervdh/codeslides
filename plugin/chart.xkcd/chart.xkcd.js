@@ -1,12 +1,24 @@
-// import chartXkcd from 'chart.xkcd';
-// import 'chart.xkcd/dist';
 const ChartXkcd =
   window.ChartXkcd ||
   (function() {
-    let allCharts = [];
+    let allCharts = new Map();
 
     toArray = o => Array.prototype.slice.call(o);
 
+    // we'll look at the display style of a <section> to determine if we have a real size or not
+    getSectionParent = el => {
+      if (!el) {
+        console.error('No <section> found as parent');
+        return undefined;
+      }
+      if (el.tagName === 'SECTION') {
+        return el;
+      }
+      return getSectionParent(el.parentNode);
+    };
+
+    // different css classes for different chart types
+    // (expand this as needed)
     chartClass = classList => {
       const chartClasses = {
         'line-chart': chartXkcd.Line,
@@ -21,7 +33,12 @@ const ChartXkcd =
       console.error('No suitable chart class defined');
     };
 
+    // async read a file and create a chart with the data
+    // (this could use -a lot- of error handling)
     parseJsonDataFile = svgEl => {
+      if (allCharts.get(svgEl)) {
+        return;
+      }
       const jsonFile = svgEl.getAttribute('data-chart-json');
       const chartObject = chartClass(toArray(svgEl.classList));
       fetch(jsonFile).then(response =>
@@ -38,23 +55,26 @@ const ChartXkcd =
               ...jsonData['options']
             }
           });
-          allCharts.push(myChart);
+          allCharts.set(svgEl, myChart);
         })
       );
     };
 
-    Reveal.addEventListener('ready', function() {
-      // async load all data for charts
+    createCharts = () => {
       const chartDiv = toArray(document.querySelectorAll('.xkcd-chart'));
-      chartDiv.forEach(el =>
-        toArray(el.childNodes)
-          .filter(child => child.nodeName === 'svg')
-          .filter(el => el.hasAttribute('data-chart-json'))
-          .forEach(svg => parseJsonDataFile(svg))
-      );
-    });
+      chartDiv.forEach(el => {
+        // only calculate chart when we get our "display: block" applied
+        // (otherwhise size is still zero)
+        const sectionEl = getSectionParent(el);
+        if (sectionEl && sectionEl.style['display'] === 'block') {
+          toArray(el.childNodes)
+            .filter(child => child.nodeName === 'svg')
+            .filter(el => el.hasAttribute('data-chart-json'))
+            .forEach(svg => parseJsonDataFile(svg));
+        }
+      });
+    };
 
-    Reveal.addEventListener('slidechanged', function() {
-      // allCharts.forEach(ch => ch.render());
-    });
+    Reveal.addEventListener('ready', createCharts);
+    Reveal.addEventListener('slidechanged', createCharts);
   })();

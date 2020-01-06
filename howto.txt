@@ -2,22 +2,30 @@ Easier editing of these presentations using keybindings and snippets for visual 
 
 keybindings.json
 [
-    {
-        "key": "cmd+k s",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
-        "args": {
-            "snippet": "<span show-steps='${0:1}'>$TM_SELECTED_TEXT</span>"
-        }
-    },
-    {
-        "key": "cmd+k h",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
-        "args": {
-            "snippet": "<span highlight-steps='${0:1}'>$TM_SELECTED_TEXT</span>"
-        }
+   {
+    "key": "cmd+k s",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "<span sstep='${0:1}'>$TM_SELECTED_TEXT</span>"
     }
+  },
+  {
+    "key": "cmd+k h",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "<span hstep='${0:1}'>$TM_SELECTED_TEXT</span>"
+    }
+  },
+  {
+    "key": "cmd+k i",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "<span class='ilcode'>$TM_SELECTED_TEXT</span>"
+    }
+  }
 ]
 
 User snippets, HTML
