@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="223 179 493 473" width="493" height="473">
+  <defs>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.12.1 
+    <dc:date>2020-01-07 08:52:47 +0000</dc:date>
+  </metadata>
+  <g id="svgstep" fill-opacity="1" stroke="none" stroke-dasharray="none" stroke-opacity="1" fill="none">
+    <title>svgstep</title>
+    <g id="svgstep: 4+">
+      <title>4+</title>
+      <g id="Line_7">
+        <line x1="297.09318" y1="541.07637" x2="284.53575" y2="303.80702" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="svgstep: 1+">
+      <title>1+</title>
+      <g id="Graphic_2">
+        <circle cx="281" cy="237" r="57.0000910804081" fill="#ff8080"/>
+        <circle cx="281" cy="237" r="57.0000910804081" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="svgstep: 2,3">
+      <title>2,3</title>
+      <g id="Graphic_3">
+        <circle cx="660" cy="412" r="55.0000878846043" fill="#80ffff"/>
+        <circle cx="660" cy="412" r="55.0000878846043" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_5">
+        <line x1="332.76375" y1="260.90147" x2="601.0644" y2="384.787" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="svgstep: 3+">
+      <title>3+</title>
+      <g id="Graphic_4">
+        <circle cx="300" cy="596" r="55.0000878846043" fill="lime"/>
+        <circle cx="300" cy="596" r="55.0000878846043" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_6">
+        <line x1="611.0129" y1="437.03785" x2="357.8024" y2="566.45655" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

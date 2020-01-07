@@ -50,6 +50,41 @@
             complexity and difficulty." - Nicoll Hunt
           </footer>
         </section>
+        <section>
+          <div codesteps>
+            <pre
+              class="java"
+            >com/hogent/MyClass2.java  <code class='codesteps' data-noescape data-trim>
+						<span sstep='3+'>package com.hogent;
+
+						</span>class MyClass2 {
+							public <span hstep='2'>static</span> void main(String args[]) {
+								
+							}
+						}
+						</code></pre>
+            <div explanation>
+              <span step="1">a java program needs a main method </span>
+              <span step="2">the main method must be static</span>
+              <span step="3">don't forget the package</span>
+            </div>
+          </div>
+        </section>
+        <section id="svgslide">
+          <h3>step through an svg.</h3>
+          <div class="fragment" svg-step>
+            <svg
+              id="svg"
+              class="svg-section"
+              width="100%"
+              height="100%"
+              preserveAspectRatio="xMidYMid"
+              snapfile="svg/demo.svg"
+            >
+              <use xlink:href="plugin/codestepper/loaders.svg#myloader"></use>
+            </svg>
+          </div>
+        </section>
       </div>
     </div>
 
@@ -57,7 +92,7 @@
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
     <script src="plugin/codestepper/codestepper.js"></script>
-    <script src="js/hogent-reveal.js" data-start-at-last="false"></script>
+    <script src="js/hogent-reveal.js" data-start-at-last="true"></script>
     <script src="js/snap.svg.js"></script>
   </body>
 </html>
